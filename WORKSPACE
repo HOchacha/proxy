@@ -23,11 +23,11 @@ load("@bazel_tools//tools/build_defs/repo:http.bzl", "http_archive")
 # 2. Update .bazelversion, envoy.bazelrc and .bazelrc if needed.
 #
 # Commit date: 2024-03-15
-ENVOY_SHA = "0dede366537171607da9e5a0ff40586e6017e827"
+ENVOY_SHA = "ee48839d7c2f6bb28a9138a6c88ff3076011167a"
 
-ENVOY_SHA256 = "f4096438a63f6c937933ce23d3db79ee3e49c529ce2926e3eefc0bb6bb594239"
+ENVOY_SHA256 = "3061e0fd72609106fa174c6daded6e02fd438ec52db5603d52fe711cf88176c6"
 
-ENVOY_ORG = "envoyproxy"
+ENVOY_ORG = "HOchacha"
 
 ENVOY_REPO = "envoy"
 
@@ -39,6 +39,8 @@ http_archive(
     strip_prefix = ENVOY_REPO + "-" + ENVOY_SHA,
     url = "https://github.com/" + ENVOY_ORG + "/" + ENVOY_REPO + "/archive/" + ENVOY_SHA + ".tar.gz",
 )
+
+
 
 load("@envoy//bazel:api_binding.bzl", "envoy_api_binding")
 
